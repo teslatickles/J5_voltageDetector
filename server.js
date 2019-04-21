@@ -72,7 +72,7 @@ board.on("ready", () => {
         })
     });
 
-    server.listen(port, () => {
+    server.listen(process.env.PORT || port, () => {
         console.log(`server up @ ${port}`)
     })
 });
