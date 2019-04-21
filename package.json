@@ -3,9 +3,11 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "johnny-five": "^1.0.0",
         "react": "^16.8.3",
         "react-dom": "^16.8.3",
-        "react-scripts": "2.1.5"
+        "react-scripts": "^2.1.8",
+        "socket.io-client": "^2.2.0"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -15,6 +17,9 @@
     },
     "eslintConfig": {
         "extends": "react-app"
+    },
+    "engines": {
+        "node": "11.8.0"
     },
     "browserslist": [
         ">0.2%",
