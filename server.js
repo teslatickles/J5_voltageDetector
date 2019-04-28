@@ -4,11 +4,19 @@ const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 const port = 5000;
 
+
+
 const five = require("johnny-five");
 const board = new five.Board();
 
-let os = require('os')
+let os = require('os');
 
+// process.EventEmitter = require('events').EventEmitter; // add this line
+// const zetta = require('zetta');
+// zetta()
+//     .name('Hunter-H')
+//     .listen(process.env.PORT || port, function () {
+//         console.log(`Zetta is running at ${port}`);
 board.on("ready", () => {
 
     const sw = new five.Switch(3);
@@ -75,4 +83,6 @@ board.on("ready", () => {
     server.listen(process.env.PORT || port, () => {
         console.log(`server up @ ${port}`)
     })
+    // });
+
 });
