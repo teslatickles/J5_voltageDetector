@@ -62,11 +62,11 @@ class Johnny extends Component {
 
         return (
             <>
-                <h1>{date}</h1>
-                <h2>{userName}</h2>
-                <h2>{userCount < 2 ?
-                    `${userCount} user is connected` :
-                    `${userCount} users are connected!`}</h2>
+                <h1>{date || '04/20/2019'}</h1>
+                <h2>{userName || 'Hunter H'}</h2>
+                <h2>{userCount < 1 ?
+                    `${userCount} No users connected` :
+                    `${userCount} user(s) are connected!`}</h2>
                 <h3>{led ? `LED is on` : `LED is off`}</h3>
                 <Voltage />
             </>
